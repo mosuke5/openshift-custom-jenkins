@@ -1,1 +1,3 @@
 generic-webhook-trigger:1.67
+kubernetes:1.19.3
+pipeline-model-definition:1.6.0
