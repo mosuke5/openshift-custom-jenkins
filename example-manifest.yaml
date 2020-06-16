@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: BuildConfig
 metadata:
-  name: custom-jenkins-build
+  name: custom-jenkins
 spec:
   source:
     git:
@@ -24,3 +24,30 @@ kind: ImageStream
 apiVersion: v1
 metadata:
   name: custom-jenkins
+---
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: custom-jenkins-agent
+  labels:
+    name: custom-jenkins-agent
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: "custom-jenkins-agent:latest"
+  resources: {}
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile_for_agent
+  source:
+    type: Git
+    git:
+      uri: https://github.com/mosuke5/openshift-custom-jenkins
+      ref: master
+---
+kind: ImageStream
+apiVersion: v1
+metadata:
+  name: custom-jenkins-agent
