@@ -8,7 +8,8 @@
 $ oc new-project admin-devops
 $ oc apply -f example-manifest.yaml
 buildconfig.build.openshift.io/custom-jenkins created
-imagestream.image.openshift.io/custom-jenkins created buildconfig.build.openshift.io/custom-jenkins-agent created
+imagestream.image.openshift.io/custom-jenkins created
+buildconfig.build.openshift.io/custom-jenkins-agent created
 imagestream.image.openshift.io/custom-jenkins-agent created
 
 $ oc start-build custom-jenkins
