@@ -2,6 +2,6 @@ generic-webhook-trigger:1.67
 kubernetes:1.19.3
 pipeline-model-definition:1.6.0
 slack:2.37
-git:4.2.2
+git:4.4.4
 git-client:3.2.1
 scmskip:1.0.1
