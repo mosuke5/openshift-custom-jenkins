@@ -1,5 +1,5 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/jenkins-agent-maven
 USER root
-COPY /etc/centos.repo /etc/yum.repos.d/centos.repo
+RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 RUN yum install -y postgresql skopeo
 USER 1001
