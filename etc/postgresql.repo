@@ -1,0 +1,6 @@
+[pgdg90]
+name=PostgreSQL 9.4 RPMs for RHEL 8
+baseurl=https://yum-archive.postgresql.org/9.0/redhat/rhel-6-x86_64
+enabled=1
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
